@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home', // Ganti 'home' dengan rute yang sesuai
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   // ... (rute lainnya)
