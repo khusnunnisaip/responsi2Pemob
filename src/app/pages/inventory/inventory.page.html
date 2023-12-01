@@ -1,0 +1,28 @@
+<!-- src/app/pages/inventory/inventory.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Daftar Inventaris
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="items.length > 0; else noItems">
+    <ion-item *ngFor="let item of items">
+      {{ item.name }} - {{ item.quantity }}
+      <ion-buttons slot="end">
+        <ion-button (click)="editItem(item)">Edit</ion-button>
+        <ion-button (click)="deleteItem(item.id)">Delete</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #noItems>
+    <ion-text color="danger">
+      Tidak ada item inventaris.
+    </ion-text>
+  </ng-template>
+
+  <ion-button expand="full" (click)="addItem()">Tambah Item</ion-button>
+</ion-content>
