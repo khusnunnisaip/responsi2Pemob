@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  // ... (rute lainnya)
+
 ];
 
 @NgModule({
